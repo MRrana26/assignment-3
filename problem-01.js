@@ -96,15 +96,6 @@ function  analyzeText(str) {
 
         let sentenceStr = sentence.split(' ');
         let sentenceLength = sentence.trim().split(' ').join('').length;
-        
-
-        for(let sentenceObj of sentenceStr){
-            if(sentenceObject.hasOwnProperty(sentenceObj)){
-                sentenceObject[sentenceObj]++;
-            } else{
-                sentenceObject[sentenceObj] = 1;
-            }
-        }
 
         let words = '';
         
@@ -123,4 +114,5 @@ function  analyzeText(str) {
         return 'Invalid';
     }   
 }
+
 // Problem 05 Solved Alhamdulillah--------------------------------------
