@@ -47,7 +47,7 @@ function finalScore(omr) {
         return 'Invalid';
     }
 }
-// Problem 02 Solved Alhamdulillah--------------------------------------
+// Problem 03 Solved Alhamdulillah--------------------------------------
 
 
 // problem 04-----------------------------------------------------------
@@ -85,9 +85,42 @@ function gonoVote(array) {
         return 'Invalid'
     }
 }
+// Problem 04 Solved Alhamdulillah--------------------------------------
 
 
+// problem 05-----------------------------------------------------------
+function  analyzeText(str) {
+    let sentence = str;
+    if(typeof sentence === 'string' && sentence.trim().length !== 0){
+        let sentenceObject = {};
 
+        let sentenceStr = sentence.split(' ');
+        let sentenceLength = sentence.trim().split(' ').join('').length;
+        
 
+        for(let sentenceObj of sentenceStr){
+            if(sentenceObject.hasOwnProperty(sentenceObj)){
+                sentenceObject[sentenceObj]++;
+            } else{
+                sentenceObject[sentenceObj] = 1;
+            }
+        }
 
+        let words = '';
+        
+        for(let word in sentenceStr){
+            if(words.length < sentenceStr[word].length){
+                words = sentenceStr[word];
+            }
+        }
 
+        return {
+            longwords: words,
+            token: sentenceLength
+        }
+
+    }else{
+        return 'Invalid';
+    }   
+}
+// Problem 05 Solved Alhamdulillah--------------------------------------
